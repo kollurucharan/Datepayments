@@ -1,0 +1,15 @@
+CREATE TABLE InsurancePolicyPayments (
+    inpp_id serial PRIMARY KEY, 
+    iplc_sindex int,
+	  inpp_iplc_id int,
+    inpp_trans_id varchar(50),
+    inpp_amount numeric,
+    inpp_paymode char(10),
+    inpp_date DATE
+);
+
+INSERT INTO InsurancePolicyPayments (iplc_sindex, inpp_iplc_id, inpp_trans_id, inpp_amount, inpp_paymode, inpp_date)
+VALUES
+    (1, 1001, 'TRX12345', 500.00, 'Credit Card', '2023-09-11'),
+    (2, 1002, 'TRX67890', 750.50, 'Debit Card', '2023-09-12'),
+    (3, 1003, 'TRX54321', 1200.00, 'Bank Transfer', '2023-09-13');
